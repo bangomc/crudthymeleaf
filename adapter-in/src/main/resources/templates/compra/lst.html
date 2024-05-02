@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/layout :: layout(~{::#titulo},~{::#conteudo})}">
+<body>
+<span class="mdl-layout-title" id="titulo">Compras</span>
+<div id="conteudo">
+    <div>
+        <main>
+            <div class="mdl-grid">
+                <table class="mdl-data-table mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+                    <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Data</th>
+                        <th class="mdl-data-table__cell--non-numeric">Loja</th>
+                        <th>Valor</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr onclick="location.href='edt.html'">
+                        <td class="mdl-data-table__cell--non-numeric">12/09</td>
+                        <td class="mdl-data-table__cell--non-numeric">Altero</td>
+                        <td>104,72</td>
+                    </tr>
+                    <tr onclick="location.href='edt.html'">
+                        <td class="mdl-data-table__cell--non-numeric">23/09</td>
+                        <td class="mdl-data-table__cell--non-numeric">Altero</td>
+                        <td>351,96</td>
+                    </tr>
+                    <tr onclick="location.href='edt.html'">
+                        <td class="mdl-data-table__cell--non-numeric">28/09</td>
+                        <td class="mdl-data-table__cell--non-numeric">Ornatos</td>
+                        <td>443,70</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <a th:href="@{/compras/novo}" id="view-source" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+        <i class="material-icons">add</i>
+    </a>
+</div>
+</body>
+</html>
